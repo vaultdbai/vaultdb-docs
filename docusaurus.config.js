@@ -1,132 +1,112 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
+
+// produced by redirect-config.py based on redirect-urls.csv
+const REDIRECTS = []
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'VaultDB',
-  tagline: 'VaultDB.ai',
-  favicon: 'img/logo.png',
+  title: "VaultDB",
+  url: "https://docs.vaultdb.ai",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "vaultdb.ai", // Usually your GitHub org/username.
+  projectName: "vaultdb-docs", // Usually your repo name.
+  trailingSlash: false,
 
-  // Set the production url of your site here
-  url: 'http://docs.vaultdb.ai',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'vaultdb.ai', // Usually your GitHub org/user name.
-  projectName: 'vaultdb-docs', // Usually your repo name.
-
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
-  // Even if you don't use internalization, you can use this field to set useful
-  // metadata like html lang. For example, if your site is Chinese, you may want
-  // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: REDIRECTS
+      }
+    ]
+  ],
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
+          // remarkPlugins: [[remarkCodeHike, { theme }]],
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.dev/vaultdbai/vaultdb-docs/tree/main/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.dev/vaultdbai/vaultdb-docs/tree/main/',
+          editUrl: "https://github.dev/vaultdbai/vaultdb-docs/blob/master",
+          routeBasePath: "/",
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
+
+        },
+        gtag: {
+          trackingID: "G-EYFXNGNGB6",
+          anonymizeIP: true,
         },
       }),
     ],
   ],
 
   themeConfig:
+
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/logo.png',
+      image: "img/og-vaultdb.png",
+      metadata: [{name: "og:width", content: "200"}, {name: "og:height", content: "126"}],
       navbar: {
-        title: 'VaultDB',
         logo: {
-          alt: 'VaultDB Logo',
-          src: 'img/logo.png',
+          alt: "vaultdb Logo",
+          srcDark: "img/logo.png",
+          src: "img/logo.png",
+          href: "/",
+          height: 30,
         },
         items: [
           {
             type: "doc",
             position: "left",
             docId: "index",
-            label: "Python Docs",
+            label: "VaultDB",
           }
         ],
         hideOnScroll: true,
       },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/vaultdb',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/vaultdbai',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/vaultdbai',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/vaultdbai/vaultdb-docs',
-              },
-            ],
-          },
-        ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      docs: {
+        sidebar: {
+          autoCollapseCategories: true
+        }
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
+      },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: "0P1VWNW4MR",
+
+        // Public API key: it is safe to commit it
+        apiKey: "7704f2f0fbe2321deda36ae78b0236dc",
+
+        indexName: "vaultdb-docs",
+
+        // Optional: see doc section below
+        contextualSearch: true,
+
+        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+        externalUrlRegex: "external\\.com|domain\\.com",
+
+        // Optional: Algolia search parameters
+        searchParameters: {},
+
+        // Optional: path for search page that enabled by default (`false` to disable it)
+        searchPagePath: false,
+
+        //... other Algolia params
       },
     }),
 };
