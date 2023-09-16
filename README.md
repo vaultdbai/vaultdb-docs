@@ -33,6 +33,6 @@ If you create a PR, a preview domain will be created where you can view your cha
 
 ### Automatic publishing
 
-Any pushes to the `master` branch will automatically publish to [the live documentation pages](https://metaflow.org). The publishing uses GitHub Actions and GitHub pages. You can see the progress of the publish action by going to the `Actions` tab of this repository.
+Any pushes to the `master` branch will automatically publish to [the live documentation pages](http://docs.vaultdb.ai). The publishing uses GitHub Actions and GitHub pages. You can see the progress of the publish action by going to the `Actions` tab of this repository.
 
 If you forget the site URL, you can go to `Environments` on the right hand side, click on `github-pages` and then click on `View Deployment`.
