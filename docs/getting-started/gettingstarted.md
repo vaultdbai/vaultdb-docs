@@ -1,5 +1,5 @@
 ---
-title: Getting Started
+title: Installation
 ---
 
 # Installing VaultDB
@@ -17,8 +17,8 @@ We highly recommend using **Python 3** for new projects. VaultDB does supports P
 :::info
 
 If you want to get a feel of VaultDB and the infrastructure behind it without having to
-install anything locally, you can do in the browser by signing up for [a VaultDB
-Hub](datahub.html).
+install anything locally, you can do in the browser by setting up [a VaultDB
+Hub](/hub/datahub).
 
 ## Upgrading VaultDB
 
