@@ -25,4 +25,4 @@ jobs:
           algolia-app-id: ${{ secrets.ALGOLIA_APP_ID }}
           algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
           crawler-name: 'vaultdb-docs'
-          site-url: 'http://docs.vaultdb.ai'
+          site-url: 'https://docs.vaultdb.ai'

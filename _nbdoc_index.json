@@ -1,0 +1,18 @@
+{
+    "Flow": "https://docs.vaultdb.ai/docs/api-ref/client#Flow",
+    "Run": "https://docs.vaultdb.ai/docs/api-ref/client#Run",
+    "Step": "https://docs.vaultdb.ai/docs/api-ref/client#Step",
+    "Task": "https://docs.vaultdb.ai/docs/api-ref/client#Task",
+    "FlowSpec": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/basic#FlowSpec",
+    "FlowSpec.next": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/basic#FlowSpec.next",
+    "FlowSpec.foreach_stack": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/basic#FlowSpec.foreach_stack",
+    "@batch": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/decorators#@batch",
+    "@card": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/decorators#@card",
+    "@catch": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/decorators#@catch",
+    "@conda": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/decorators#@conda",
+    "@kubernetes": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/decorators#@kubernetes",
+    "@parallel": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/decorators#@parallel",
+    "@project": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/decorators#@project",
+    "@resources": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/decorators#@resources",
+    "@step": "https://docs.vaultdb.ai/docs/api-ref/constructing-flows/decorators#@step"
+}
