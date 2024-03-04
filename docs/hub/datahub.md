@@ -2,25 +2,21 @@
 title: VaultDB Data Hub
 ---
 
-VaultDB Database Hub
-=============================
+# VaultDB Database Hub
 
 This repository contains the VaultDB ai platform aws quickstart templates.
 
-Architecture Diagram
---------------------
+## Architecture Diagram
 
 #### Componets created by the Cloudformation Templates
 
 ![Architecture](architecture.png)
 
-Cost
-----
+## Cost
 
 #### You Pay to AWS for the amount of Data storage and Lambda Compute you use. typical cost for my development and testing is close to **Zero**
 
-Setup Environment
------------------
+## Setup Environment
 
 ### Create Service Role
 
@@ -29,7 +25,6 @@ Setup Environment
 #### AWS CLI Command to Create Service Role
 
     awsv2 cloudformation create-stack --stack-name vaultdb-service-role --template-body https://vaultdb-web.s3.us-east-2.amazonaws.com/awsquickstart/service-role.yaml --capabilities CAPABILITY_NAMED_IAM
-        
 
 #### Create VaultDB Instance using Service Role created above
 
@@ -52,13 +47,11 @@ Setup Environment
                 Provide the VPC ID if you have one and wants to use that otherwise remove the parameter all together or provide empty value
             PRIVATE-SUBNET-CIDR
                 172.31.200.0/20
-        
 
 ###### Delete/ Uninstall
 
 awsv2 cloudformation delete-stack --stack-name \[APPLICATION-STACK-NAME\]
 
-License
--------
+# License
 
 All Images and Text copyright VaultDB.ai LLC

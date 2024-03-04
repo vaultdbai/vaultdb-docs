@@ -52,14 +52,15 @@ Your Local vaultDB instance works like a database server that returns merged res
 
 ## Why VaultDB?
 
-Because of so many reasons but to list few VaultDB Does following:-- 
-1) Written in C++ so it's very faster 
-2) Built in support to read and write parquet, csv, json etc files 
-3) Integrated with pandas, numpy, PyArrow 
-4) supports all extensions supported by DuckDB 
-5) Works on all platforms (Windows, Linux, Mac) 
-6) Allows you to use your laptop/desktop resources instead of using cloud for everything 
-7) Did I say it costs you pennies to run. 
+Because of so many reasons but to list few VaultDB Does following:--
+
+1) Written in C++ so it's very faster
+2) Built in support to read and write parquet, csv, json etc files
+3) Integrated with pandas, numpy, PyArrow
+4) supports all extensions supported by DuckDB
+5) Works on all platforms (Windows, Linux, Mac)
+6) Allows you to use your laptop/desktop resources instead of using cloud for everything
+7) Did I say it costs you pennies to run.
 8) Allows you to develop like you are working in Production.
 
 ## License

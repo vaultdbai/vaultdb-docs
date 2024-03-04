@@ -2,12 +2,8 @@
 title: Governance Risk and Controls (GRC)
 ---
 
-Roles
-========
+# Roles
 
-Fortress
-========
+# Fortress
 
-Tags
-========
-
+# Tags
